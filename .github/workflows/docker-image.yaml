@@ -13,8 +13,6 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
         - name: 'Create env file'
-          env:
-              PRO_API_KEY=${{ secrets.PRO_API_KEY }}
           run: echo ${{ secrets.PRO_API_KEY }}
   build1:
     runs-on: ubuntu-latest
