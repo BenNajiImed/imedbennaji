@@ -27,7 +27,7 @@ jobs:
       - name: install packages
         run: |
           pip install requests 
-          pip install dotenv
+          pip install load_dotenv
       - name: execute py script # run the run.py to get the latest data
         run: |
           python APIcall.py
