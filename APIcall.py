@@ -1,3 +1,4 @@
+import os
 from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
@@ -8,7 +9,7 @@ parameters = {
 }
 headers = {
   'Accepts': 'application/json',
-  'X-CMC_PRO_API_KEY': '0a8b63bf-61ff-403e-83fa-781612e44113',
+  'X-CMC_PRO_API_KEY': os.environ['API_KE'],
 }
 
 session = Session()
