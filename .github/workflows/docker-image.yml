@@ -24,10 +24,10 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8 #install the python needed
+          python-version: 3.1 #install the python needed
       - name: install packages
         run: |
-          pip install requests dotenv
+          pip install requests
       - name: execute py script # run the run.py to get the latest data
         run: |
           python APIcall.py
