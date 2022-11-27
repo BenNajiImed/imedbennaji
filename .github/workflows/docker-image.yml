@@ -15,9 +15,19 @@ jobs:
         - name: 'Create env file'
           run: |
             echo PRO_API_KEY=${{ secrets.PRO_API_KEY }} > .env
-        - name: 'python'
-          run: |
-            python APIcall.py
+  build1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner.
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 #install the python needed
+      - name: execute py script # run the run.py to get the latest data
+        run: |
+          python APIcall.py
   build:
 
     runs-on: ubuntu-latest
