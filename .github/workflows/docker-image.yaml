@@ -14,8 +14,10 @@ jobs:
     steps:
         - name: 'Create env file'
           run: echo ${{ secrets.PRO_API_KEY }}
-        - name: 'Create env '
-          run: echo PRO_API_KEY=${{ secrets.PRO_API_KEY }} > .env
+        - name: Create .env file
+          uses: ozaytsev86/create-env-file@v1
+          with:
+            PRO_API_KEY: ${{ secrets.PRO_API_KEY }}
   build1:
     runs-on: ubuntu-latest
 
