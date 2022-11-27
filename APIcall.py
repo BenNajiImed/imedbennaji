@@ -2,9 +2,6 @@ import os
 from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
-from dotenv import load_dotenv
-
-load_dotenv()  # take environment variables from .env.
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?'
 parameters = {
   'slug':'dogecoin',
