@@ -16,8 +16,7 @@ jobs:
           env:
               PRO_API_KEY=${{ secrets.PRO_API_KEY }}
         - name: 'run'
-          run: |
-          echo PRO_API_KEY
+          run: echo ${{ secrets.PRO_API_KEY }}
   build1:
     runs-on: ubuntu-latest
 
