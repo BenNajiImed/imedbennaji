@@ -16,7 +16,7 @@ jobs:
           env:
               PRO_API_KEY=${{ secrets.PRO_API_KEY }}
           run: |
-          nbdev_test_nbs
+          echo PRO_API_KEY
   build1:
     runs-on: ubuntu-latest
 
