@@ -9,6 +9,9 @@ on:
 
 env:
    API_KEY: ${{secrets.PRO_API_KEY}}
+run: |
+   nbdev_test_nbs
+   
 
 
 jobs:
@@ -16,8 +19,9 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
       - name: step 1
-        run: echo "The API key is:${{env.API_KEY}}"
-
+        env:
+           API_KEY: ${{secrets.PRO_API_KEY}}
+        run: python APIcall.py
   build:
 
     runs-on: ubuntu-latest
