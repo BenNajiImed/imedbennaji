@@ -14,7 +14,7 @@ jobs:
       - name: step 1
         env:
            API_KEY: ${{secrets.PRO_API_KEY}}
-        run: python APIcall.py
+        run: python ./APIcall.py
   build:
 
     runs-on: ubuntu-latest
