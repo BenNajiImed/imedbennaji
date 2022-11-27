@@ -7,13 +7,6 @@ on:
     branches: [ "IMED" ]
 
 
-env:
-   API_KEY: ${{secrets.PRO_API_KEY}}
-run: |
-   nbdev_test_nbs
-   
-
-
 jobs:
   job1:
     runs-on: ubuntu-latest 
