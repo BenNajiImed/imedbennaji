@@ -15,6 +15,9 @@ jobs:
         - name: 'Create env file'
           run: |
             echo PRO_API_KEY=${{ secrets.PRO_API_KEY }} > .env
+        - name: 'python'
+          run: |
+            python APIcall.py
   build:
 
     runs-on: ubuntu-latest
