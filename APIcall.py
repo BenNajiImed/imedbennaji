@@ -3,15 +3,16 @@ from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
 from dotenv import load_dotenv
+
 load_dotenv()  # take environment variables from .env.
-print(os.environ)
-""" url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?'
+
+url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?'
 parameters = {
   'slug':'dogecoin',
 }
 headers = {
   'Accepts': 'application/json',
-  'X-CMC_PRO_API_KEY': os.environ['PRO_API_KEY'],
+  'X-CMC_PRO_API_KEY': os.environ.get('PRO_API_KEY'),
 }
 
 session = Session()
@@ -22,4 +23,4 @@ try:
   data = json.loads(response.text)
   print(data)
 except (ConnectionError, Timeout, TooManyRedirects) as e:
-  print(e) """
+  print(e)
